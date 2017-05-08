@@ -1,7 +1,7 @@
                                     <html>
 <head>
 <script>
-window.location.replace("../makart");
+window.location.replace("../cumic-book-fest");
 </script>
 </head>
 <body>    
