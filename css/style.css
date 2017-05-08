@@ -1,0 +1,734 @@
+                                                                                                /* ===================================================================================== 
+    1. index 
+    2. knjige
+    3. knjiga
+    4. korpa
+    5. kupovina podaci 
+    6. kupovina dostava
+    6a kupovina potvrda
+    6b kupovina izvestaj
+    7. izdavaci
+    8. greska
+    9. vesti
+   10. vest
+   11. staticna
+   12. kontakt
+      
+   ===================================================================================== */
+.font {
+  font-family: 'PT Sans', sans-serif;
+}
+.border {
+  border: 1px solid red;
+}
+.bold {
+  font-weight: bold;
+}
+.kolona {
+  float: left;
+}
+.centar {
+  text-align: center;
+}
+.levo {
+  text-align: left;
+}
+.desno {
+  text-align: right;
+}
+.flevo {
+  float: left;
+}
+.fdesno {
+  float: right;
+}
+.clear {
+  clear: both;
+  height: 1px;
+}
+.sakri {
+  display: none;
+}
+.bred {
+  background-color: red;
+}
+.bblue {
+  background-color: blue;
+}
+.bg3 {
+  background-color: #333;
+}
+.bg2 {
+  background-color: #666;
+}
+.bg1 {
+  background-color: #999;
+}
+.border2 {
+  border: 1px solid blue;
+}
+/* ===================================================================================== */
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: #333333;
+  outline: 0;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+}
+a img {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+input[type="text"],
+input[type="telefon"],
+input[type="utf8textnumspec"],
+input[type="email"],
+input[type="broj"],
+textarea {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+p {
+  padding: 0!important;
+  margin: 0!important;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  /*Improve scaled image quality in IE7*/
+}
+input[type="submit"] {
+  background-color: #ccc;
+  border: 1px solid #999;
+  padding: 10px;
+  color: #000;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #333333;
+  font-size: 14px;
+}
+#page_wrapp {
+  width: 1000px;
+  margin: 0 auto 0 auto;
+}
+@media screen and (max-width: 1016px) {
+  #page_wrapp {
+    width: 100%;
+  }
+}
+#header_wrapper {
+  padding: 35px 35px 0 35px;
+}
+#header_wrapper #header_wrapp {
+  position: relative;
+}
+#header_wrapper #header_wrapp #logo {
+  width: 125px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#header_wrapper #header_wrapp #header {
+  text-align: center;
+}
+#header_wrapper #header_wrapp #header .dostava img {
+  max-width: 251px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+#header_wrapper #header_wrapp #header .pretraga {
+  margin: 0 auto 0 auto;
+  position: relative;
+  padding: 0px;
+  max-width: 400px;
+  width: 100%;
+}
+#header_wrapper #header_wrapp #header .pretraga input {
+  width: calc(100% - 6px - 6px - 35px) !important;
+  border: 1px solid #919294;
+}
+#header_wrapper #header_wrapp #header .pretraga input::-webkit-input-placeholder {
+  font-size: 10px;
+  line-height: 18px;
+}
+#header_wrapper #header_wrapp #header .pretraga input::-moz-placeholder {
+  font-size: 10px;
+  line-height: 16px;
+}
+#header_wrapper #header_wrapp #header .pretraga input::-ms-input-placeholder {
+  font-size: 10px;
+  line-height: 18px;
+}
+#header_wrapper #header_wrapp #header .pretraga .lupa {
+  width: 11px;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  cursor: pointer;
+}
+#header_wrapper #header_wrapp .korpa_wrapp {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 190px;
+}
+#header_wrapper #header_wrapp .korpa_wrapp #korpa_mini {
+  float: right;
+  background: url("../img/korpa_pozadina.png") no-repeat left center;
+  width: 181px;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: right;
+}
+#header_wrapper #header_wrapp .korpa_wrapp #korpa_mini a {
+  color: #fff;
+  width: 140px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 10px;
+}
+#header_wrapper #header_wrapp .korpa_wrapp .newsletter {
+  float: right;
+  margin-top: 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+#header_wrapper #header_wrapp .korpa_wrapp .drustvene_mreze {
+  float: right;
+  margin-top: 10px;
+}
+#header_wrapper #header_wrapp .korpa_wrapp .drustvene_mreze a:last-child {
+  margin-left: 10px;
+}
+#header_wrapper #meni,
+#header_wrapper #meni2 {
+  text-align: center;
+  padding-bottom: 25px;
+  margin-top: 12px;
+}
+#header_wrapper #meni a,
+#header_wrapper #meni2 a {
+  font-size: 17px;
+  color: #4d4d4d;
+  padding: 0 10px 0 10px;
+}
+#header_wrapper #meni a:hover,
+#header_wrapper #meni2 a:hover,
+#header_wrapper #meni a.current,
+#header_wrapper #meni2 a.current {
+  color: #808080;
+}
+#header_wrapper #meni2 {
+  display: none;
+}
+#header_wrapper #mob_drustvene_mreze {
+  display: none;
+}
+#header_wrapper #mob_drustvene_mreze .newsletter {
+  width: 155px!important;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+}
+#header_wrapper #mob_drustvene_mreze .drustvene_mreze {
+  float: right;
+}
+#header_wrapper #mob_drustvene_mreze .drustvene_mreze a:first-child {
+  margin-right: 10px;
+}
+@media screen and (max-width: 889px) {
+  #header_wrapper .newsletter,
+  #header_wrapper .drustvene_mreze,
+  #header_wrapper #meni {
+    display: none;
+  }
+  #header_wrapper #mob_drustvene_mreze {
+    display: block;
+    margin-top: 10px;
+  }
+  #header_wrapper #mob_drustvene_mreze .drustvene_mreze {
+    display: block;
+  }
+  #header_wrapper #meni2 {
+    display: block;
+  }
+}
+@media screen and (max-width: 759px) {
+  #header_wrapper .dostava img {
+    max-width: 151px!important;
+    margin-bottom: 24px!important;
+  }
+  #header_wrapper .pretraga {
+    max-width: 300px!important;
+  }
+}
+@media screen and (max-width: 659px) {
+  #header_wrapper .dostava {
+    display: none;
+  }
+  #header_wrapper #header {
+    padding-top: 47px!important;
+  }
+}
+@media screen and (max-width: 605px) {
+  #header_wrapper #logo {
+    float: none!important;
+    text-align: center;
+    width: 100%!important;
+    position: relative!important;
+  }
+  #header_wrapper .korpa_wrapp {
+    float: none!important;
+    width: 100%!important;
+    position: relative!important;
+  }
+  #header_wrapper .korpa_wrapp #korpa_mini {
+    float: none!important;
+    margin: 10px auto 0 auto;
+  }
+  #header_wrapper #header {
+    padding-top: 0!important;
+  }
+  #header_wrapper #meni2 a {
+    display: inline-block;
+  }
+}
+.newsletter {
+  height: 25px;
+  font-size: 14px;
+  line-height: 25px;
+  padding-right: 40px;
+  background: url("../img/nl_ikona.png") no-repeat right center;
+  cursor: pointer;
+}
+#pp_newsletter_wrapper {
+  display: none;
+}
+#pp_newsletter {
+  text-align: center;
+  width: 300px;
+}
+#pp_newsletter label {
+  display: block;
+  margin-bottom: 10px;
+}
+#pp_newsletter .dugme_kupovina {
+  font-size: 14px;
+}
+#pp_newsletter input {
+  width: 200px;
+  margin-bottom: 10px;
+}
+#pp_newsletter ::-webkit-input-placeholder {
+  font-size: 12px;
+}
+#pp_newsletter ::-moz-placeholder {
+  font-size: 12px;
+}
+#pp_newsletter :-ms-input-placeholder {
+  font-size: 12px;
+}
+
+footer {
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+  height: 90px;
+}
+footer .meni a {
+  font-size: 14px;
+  color: #333333;
+  padding: 0 7px 0 7px;
+}
+footer .newsletter {
+  position: absolute;
+  right: 35px;
+  top: 10px;
+}
+footer .drustvene_mreze {
+  position: absolute;
+  right: 35px;
+  top: 45px;
+}
+footer .drustvene_mreze a:last-child {
+  margin-left: 10px;
+}
+footer .copy {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 969px) {
+  footer .newsletter {
+    display: none;
+  }
+}
+/* ===================================================================================== */
+/* 1. index */
+#body_index #header_wrapper {
+  background: url("../img/pozadina_tackice.png");
+}
+
+#page_wrapp {
+    background: url("../img/pozadina_tackice.png");
+
+}
+
+div#newsletter-pop {
+ position: fixed;
+ top: 0%;
+ left:0%;
+ text-align: center;
+ width: 100%;
+ height: 100%;
+background: rgba(9, 179, 191, 0.86);
+opacity: 0;
+-webkit-transition:0.4s all ease;
+-moz-transition:0.4s all ease;
+-ms-transition:0.4s all ease;
+-o-transition:0.4s all ease;
+transition:0.4s all ease;
+z-index: -1;
+
+}
+
+#lightbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left:0%;
+    background: rgba(0, 0, 0, 0.87);
+opacity: 0;
+-webkit-transition:0.4s all ease;
+-moz-transition:0.4s all ease;
+-ms-transition:0.4s all ease;
+-o-transition:0.4s all ease;
+transition:0.4s all ease;
+z-index: -1;
+text-align:center;
+    white-space: nowrap;
+
+}
+
+div#newsletter-pop.fade {
+opacity: 1;
+-webkit-transition:0.4s all ease;
+-moz-transition:0.4s all ease;
+-ms-transition:0.4s all ease;
+-o-transition:0.4s all ease;
+transition:0.4s all ease;
+z-index: 9999;
+}
+
+
+#lightbox.fade{
+opacity: 1;
+-webkit-transition:0.4s all ease;
+-moz-transition:0.4s all ease;
+-ms-transition:0.4s all ease;
+-o-transition:0.4s all ease;
+transition:0.4s all ease;
+z-index: 9999;
+}
+
+#lightbox .helper {
+display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#lightbox img {
+    width: 60%;
+    vertical-align: middle;
+
+}
+
+#newsletter-pop .new-wrap {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+  top: 50%; left: 50%;
+-webkit-transform: translate(-50%,-50%);
+-moz-transform: translate(-50%,-50%);
+-o-transform: translate(-50%,-50%);
+-ms-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+}
+
+#newsletter-pop .new-wrap label {
+color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#newsletter-pop .new-wrap input[type="email"] {
+
+    margin-top: 20px;
+    width: 100%;
+    height: 5vh;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 20px;
+    outline: none !important;
+    margin-bottom: 40px;
+
+}
+
+#newsletter-pop .new-wrap input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background: white;
+    color: #2cbec8;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    outline: none !important;
+}
+
+.closer {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #2cbec8;
+}
+
+#lightbox .closing {
+position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+    background: #f5ce55;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    box-shadow: 3px 3px 14px black;
+}
+
+#newsletter-pop .new-wrap input[type="email"]::-webkit-input-placeholder {
+color: white !important;
+}
+#newsletter-pop .new-wrap input[type="email"]::-moz-input-placeholder {
+color: white !important;
+}
+#newsletter-pop .new-wrap input[type="email"]::-ms-input-placeholder {
+color: white !important;
+}
+#newsletter-pop .new-wrap input[type="email"]::-o-input-placeholder {
+color: white !important;
+}
+#newsletter-pop .new-wrap input[type="email"]::input-placeholder {
+color: white !important;
+}
+
+.page-content {
+  padding:0px 0px;
+  padding-bottom:0px;
+    background-size: 150px;
+background-attachment:fixed;
+
+}
+.contet-wrap {
+  margin-bottom: 40px;
+display:flex;
+}
+
+
+
+.contet-wrap div{
+  display: inline-block;
+}
+
+.sec-prog {
+width: 60%;
+float:left;
+position:relative;
+}
+
+.desc {
+width: 35%;
+text-align: justify;
+padding-left:20px;
+padding-top:10px;
+}
+.desc p {
+  margin-bottom: 22px !important;
+  font-size: 16.2px;
+}
+.page-content div img {
+  width: 100%;
+}
+
+.info-wrap {
+}
+
+#mapa {
+  width: 100%;
+}
+
+#mapa iframe{
+ width: 100%;
+ }
+
+.gallery {
+display:block !important;
+position:relative;
+margin-top:45px;
+font-size:0px;
+/*position:absolute;*/
+bottom:0px;
+margin-bottom:20px;
+
+}
+.slides {
+padding:0px;
+list-style:none;
+}
+.slides li {
+display:inline-block;
+width:48%;
+margin-right:1%;
+margin-top:1%;
+margin-left:1%;
+position:relative;
+}
+
+.descer {
+    position: absolute;
+    display: block;
+    bottom: 0%;
+    width: 100%;
+    height: 25%;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.descer p {
+padding: 15px !important;
+    color: #07b2bf;
+}
+
+.slides li img {
+height:215px;
+cursor:pointer;
+}
+
+
+.cover {
+    height: 45vh;
+    background-image: url(http://www.makart.rs/_img/baneri/121_makart.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #1ab7c3;
+}
+
+.cover-desc {
+    float: left;
+    width:60%;
+    height: 45vh;
+}
+
+.cover-desc p {
+    padding: 95px !important;
+    color: white;
+    font-weight: bolder;
+    font-size: 22px;
+    line-height: 35px; 
+}
+
+
+@media screen and (max-width: 889px) { 
+.cover {
+display:none;
+}
+.contet-wrap {
+display:block;
+background-image:none;
+}
+.contet-wrap div {
+  display: block;
+}
+.sec-prog {
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+float:none;
+ }
+ .desc {
+ float: none;
+ width: 90%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 20px;
+padding-right: 20px;
+    background: #00b0bd;
+ }
+ .page-content {
+    padding: 0px 0px;
+}
+
+#mapa {
+width:90%;
+margin-left: auto;
+ margin-right: auto;
+}
+
+#newsletter-pop .new-wrap input[type="email"] {
+  font-size: 15px;
+}
+body {
+  margin: 0px;
+}
+#lightbox img {
+}
+.gallery {
+position:relative;
+margin-top:20px;
+}
+.descer p {
+padding:5px !Important;
+}
+}
+
+@media screen and (max-width: 489px) { 
+.slides li img {
+height:120px;
+}
+
+}
+                            
+                            
+                            
