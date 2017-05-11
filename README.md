@@ -1,2 +1,0 @@
-# Makart
-Landing page 

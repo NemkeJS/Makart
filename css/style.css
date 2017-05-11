@@ -653,6 +653,7 @@ cursor:pointer;
     background-repeat: no-repeat;
     background-position: right center;
     background-color: #1ab7c3;
+   background-position-y: 0px;
 }
 
 .cover-desc {
@@ -662,10 +663,10 @@ cursor:pointer;
 }
 
 .cover-desc p {
-    padding: 95px !important;
+    padding: 70px !important;
     color: white;
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 35px; 
 }
 
